@@ -8,22 +8,26 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link rel="icon" href="orcbitlogo.png">
 </head>
 
 <body>
-
     <header>
         <nav>
-            <img src="images/logo.jpg" alt="logo"/>
+            <div id="logo">
+                <img src="images/logo.png" alt="logo"/>
+            </div>
             <ul>
+                <li>Support </li>
+                <li>Contact</li>
                 <li>About</li>
-                <li>Video</li>
-                <li>Support</li>
-                <li>Shop</li>
+                <li>News</li>
+                <li>Home</li>
             </ul>
         </nav>
         <div id="steel_border">
             <img src="images/steelbar.jpg" alt="steelbar" />
         </div>
     </header>
+<div id="wrapper">

@@ -4,7 +4,7 @@
 ?>
 <!--main content page-->
 <section class="maincontent">
-
+    
 </section>
 <?php
     include 'includes/socials.inc.php';
