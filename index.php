@@ -1,12 +1,12 @@
 <?php
-    include 'includs/header.inc.php';
-    include 'includs/menu.inc.php';
+    include 'includes/header.inc.php';
+    include 'includes/menu.inc.php';
 ?>
 <!--main content page-->
 <section class="maincontent">
 
 </section>
 <?php
-    include 'includs/socials.inc.php';
-    include 'includs/footer.inc.php';
+    include 'includes/socials.inc.php';
+    include 'includes/footer.inc.php';
 ?>
