@@ -1,3 +1,10 @@
+body{
+    width: 100%;
+    background-image: url("../images/background.png");
+    background-position: center;
+    background-size: contain;
+}
+
 #wrapper{
     width:74%;
     margin: auto;
