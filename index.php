@@ -1,3 +1,4 @@
+<?php
     include 'includs/header.inc.php';
     include 'includs/menu.inc.php';
 ?>
