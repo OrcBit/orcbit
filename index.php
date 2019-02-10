@@ -30,21 +30,11 @@
 
 
     </aside>
-    <!--Media section with image slideshow using js and collums with info-->
-    <section class="media">
-        <h3></h3>
-
-
-
-
+    <!--right side content feeds twitter, youtube, twitch-->
+    <section class="contentfeeds">
+        
     </section>
 
-
-
-    <!--Footer image end page content-->
-    <div class="footerimg">
-
-    </div>
     <!--Footer containing, logo, social media links andd footer content-->
     <footer>
 
