@@ -23,7 +23,7 @@
                 <li>Contact</li>
                 <li>About</li>
                 <li>News</li>
-                <li>Home</li>
+                <li><a href="index.php">Home</a></li>
             </ul>
         </nav>
         <div id="steel_border">

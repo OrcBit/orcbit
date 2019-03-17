@@ -56,7 +56,7 @@
                 
                 <li><a href="#">Priest</a></li>
                 <li><a href="#">Rogue</a></li>
-                <li><a href="#">Shaman</a></li>
+                <li><a href="shaman.php">Shaman</a></li>
                 <li><a href="#">Warlock</a></li>
                 <li><a href="#">Warrior</a></li>
 
