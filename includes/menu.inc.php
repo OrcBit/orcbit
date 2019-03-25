@@ -1,92 +1,73 @@
 <!--sidebar menu-->
-<aside class="sidebarmenu">
-    <div class="sidebarmenudiv">
-        <div class="sidebar">
-        <button class="accordion">General</button>
-        <div class="panel">
-            <ul>
-                <li><a href="#">Gold Making Guide</a></li>
-                <li><a href="#">Levelling Guide</a></li>
-                <li><a href="#">Reputation Guide</a></li>
-            </ul>
-        </div>
-
-        <button class="accordion">Class Guides</button>
-        <div class="panel">
-            <ul>
-
-                <!-- Druid class guide start -->
+<?php
+echo '<aside class="sidebarmenu">';
+    echo '<div class="sidebarmenudiv">';
+        echo '<div class="sidebar">';
+            $category_query = "SELECT * FROM category";
+            $category_query_run = $db->query($category_query);
+            while($row = mysqli_fetch_assoc($category_query_run)){
+                $category_name = $row['categoryName'];
+               
+                echo '<button class="accordion">'.$category_name.'</button>';
                 
-                <button class="classes">
+                $guides_query = "SELECT * FROM guides WHERE guideCategory = '$category_name' GROUP BY dataName ORDER BY guideName";
+                $guides_query_run = $db->query($guides_query);
+                $amount = $guides_query_run->num_rows;
+                                
+                echo '<div class="panel">';
+                    if($amount > 0){
+                            echo '<ul id="menu_categories">';
+                                while($row = mysqli_fetch_assoc($guides_query_run)){
+                                    $data_name = $row['dataName'];
+                                    $guide_category = $row['guideCategory'];
+                                    $data_id = $row['dataID'];
+                                    $images = $row['dataIcon'];
+                                                                        
+                                    if($guide_category == 'Class Guides'){
+                                        
+                                        $class_query = "SELECT * FROM class WHERE classID = '$data_id'";
+                                        $class_query_run = $db->query($class_query);
+                                        $rows = mysqli_fetch_assoc($class_query_run);
+                                        
+                                        $icon = $rows['classIcon'];
+                                        echo '<div class="menu_left">';
+                                            echo '<img src="'.$icon.'" id="icon" />';   
+                                        echo '</div>';
+                                            echo '<button class="classes">';
+                                                echo '<li>'.$data_name.'<li>';
+                                            echo '</button>';
+                                    }else{
+                                        echo '<button class="classes">';
+                                            echo '<li>'.$data_name.'<li>';
+                                        echo '</button>';
+                                    }
+                                    
+                                    $guide_query = "SELECT * FROM guides WHERE guideCategory = '$guide_category' AND dataID = '$data_id' ORDER BY guideName";
+                                    $guide_query_run = $db->query($guide_query);
+                                    $amount = $guide_query_run->num_rows;
+                                    echo '<div class="panel">';
+                                    if($amount > 1){
+                                        if($guide_category == 'Class Guides'){
 
-                    <li><a href="#" class="druid">Druid</a></li>
-                </button>
-                <div class="panel">
-                    <ul class="druid">
-                        <li><a href="#">Balance</a></li>
-                        <li><a href="#">Feral</a></li>
-                        <li><a href="#">Restoration</a></li>
-                    </ul>
-                </div>
-
-                <!-- Druid class guide end -->
-
-
-
-                <li><a href="#">Hunter</a></li>
-                <li><a href="#">Mage</a></li>
-                
-                                <!-- Paladin class guide start -->
-                
-                <button class="classes">
-
-                    <li><a href="#" class="paladin">Paladin</a></li>
-                </button>
-                <div class="panel">
-                    <ul class="paladin">
-                        <li><a href="#">Holy</a></li>
-                        <li><a href="#">Protection</a></li>
-                        <li><a href="#">Retribution</a></li>
-                    </ul>
-                </div>
-
-                <!-- paladin class guide end -->
-                
-                
-                
-                <li><a href="#">Priest</a></li>
-                <li><a href="#">Rogue</a></li>
-                <li><a href="shaman.php">Shaman</a></li>
-                <li><a href="#">Warlock</a></li>
-                <li><a href="#">Warrior</a></li>
-
-            </ul>
-        </div>
-
-        <button class="accordion">PvE</button>
-        <div class="panel">
-            <p>insert nav</p>
-        </div>
-
-        <button class="accordion">PvP</button>
-        <div class="panel">
-            <p>insert nav</p>
-        </div>
-
-        <button class="accordion">Attunements</button>
-        <div class="panel">
-            <ul>
-                <li><a href="#">Molten Core</a></li>
-                <li><a href="#">Onyxia</a></li>
-                <li><a href="#">Blackwing Lair</a></li>
-                <li><a href="#">Naxxramass</a></li>
-            </ul>
-        </div>
-
-        <button class="accordion">Raids</button>
-        <div class="panel">
-            <p>insert nav</p>
-        </div>
-    </div>
-    </div>
-</aside>
+                                            echo '<ul>';
+                                                while($row = mysqli_fetch_assoc($guide_query_run)){
+                                                    $guide_name = $row['guideName'];
+                                                    $sub_icon = $row['dataIcon'];
+                                                    echo '<div class="menu_left">';
+                                                        echo '<img src="'.$sub_icon.'" id="icon" />';   
+                                                    echo '</div><br>';
+                                                    echo '<li>'.$guide_name.'</li>';
+                                                }
+                                            echo '</ul>';
+                                        }
+                                    }
+                                    echo '</div>';
+                                }
+                            echo '</ul>';
+                    }
+                echo '</div>';
+            }
+        echo '</div>';
+    echo '</div>';
+echo '</aside>';
+?>

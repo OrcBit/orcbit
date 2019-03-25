@@ -1,4 +1,16 @@
- var acc = document.getElementsByClassName("classes");
+function player(val){
+	$("#function").load("adminfunction.php?id=" + val);
+}
+
+function dosomething(val){
+  console.log(val);
+}
+
+function fjerns(){
+  $("#function").hide();
+};
+
+var acc = document.getElementsByClassName("classes");
         var i;
 
         for (i = 0; i < acc.length; i++) {
@@ -25,6 +37,22 @@
                     panel.style.display = "none";
                 } else {
                     panel.style.display = "block";
+                }
+            });
+        }
+
+
+var acc = document.getElementsByClassName("classes_open");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "block";
+                } else {
+                    panel.style.display = "none";
                 }
             });
         }

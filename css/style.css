@@ -8,6 +8,10 @@ body{
     margin: auto;
 }
 
+ul{
+    padding-inline-start: 10px;
+}
+
 header p{
     position: absolute;
     z-index: 3;
@@ -104,6 +108,16 @@ nav img{
     float: left; 
 }
 
+.menu_left{
+    width:15%;
+    float: left;
+}
+
+#menu_categories img{
+    max-width:100%;
+    border-radius: 100%;
+}
+
 .maincontent{
     width: 60%;
     height: auto;
@@ -152,16 +166,12 @@ nav img{
 }
 
 #content h1{
-    font-size: 24px;
 }
 
 #content h2{
-    font-size: 16px;
-    font-weight: bold;
 }
 
 #content p{
-    font-size: 14px;
 }
 
 #content img{
@@ -171,24 +181,29 @@ nav img{
 h1{
     font-family: 'lifecraftfont';
     src: url('../fonts/lifecraftfont.woff'); 
-    font-size: 300%;
+    font-size: 200%;
     color: #e9d839;
     text-shadow: 2px 2px 5px #000000;
     padding-left: 10px;
 }
 
 h2{
-    font-size: 300%;
+    font-size: 130%;
     font-family: 'lifecraftfont';
     src: url('../fonts/lifecraftfont.woff'); 
     color: #e9d839;
     text-shadow: 2px 2px 5px #000000;
     padding-left: 10px;
+    margin: 0;
 }
 
 p {
-    font-family: 'Anton', sans-serif;
-    font-size: 160%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    font-
+
 }
 
 #youtube_video{
@@ -199,7 +214,6 @@ p {
 
  .accordion {
             cursor: pointer;
-            padding: 8px;
             width: 100%;
             border: none;
             text-align: left;
@@ -215,9 +229,9 @@ p {
         }
 
         .panel {
-            padding: 0 18px;
             display: none;
             overflow: hidden;
+            clear: both;
         }
 
         .sidebar ul {
@@ -269,16 +283,15 @@ p {
         }
 
         .classes {
-
             background: none;
             cursor: pointer;
-            padding: 8px;
-            width: 100%;
+            width: 85%;
             border: none;
             text-align: left;
             outline: none;
             font-size: 15px;
             transition: 0.4s;
+            float: left;
         }
 
         .druid {
@@ -295,3 +308,87 @@ p {
                 .paladin{
             color: #F58CBA !important;
         }
+
+
+/* ADMIN */
+
+nav #admin-nav{
+    width:100%;
+    height: 70px;
+    background-color: #CCC;
+    opacity: 0.5;
+}
+
+#addGuide{
+    width:80%;
+    margin-left:10%;
+}
+
+#addGuide form p{
+    width:100%;
+    font-size: 125%;
+    height: 50px;
+    color:#000;
+    padding-bottom: 20px;
+    font-weight: bold;
+}
+
+#addGuide form{
+    width:100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+#addGuide form input{
+    width:95%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color:#ccc;
+    border:none;
+    padding: 1%;
+    font-family: 'roboto';
+    font-size: 125%;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+
+#addGuide textarea{
+    width:95%;
+    height: 500px;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color:#ccc;
+    border:none;
+    padding: 1%;
+    font-family: 'roboto';
+    font-size: 125%;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+
+#editGuide{
+    width:80%;
+    margin-left:10%;
+    background-color: #CCC;
+}
+
+.icon_left{
+    width:100%;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.icon_left h2{
+    float: left;
+    margin-left: 10px;
+    font-size: 40px;
+}
+
+.icon_left img{
+    float: left;
+    max-width: 40px;
+}

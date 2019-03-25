@@ -1,4 +1,5 @@
 <?php
+    include 'includes/connect.inc.php';
     include 'includes/header.inc.php';
     include 'includes/menu.inc.php';
 ?>

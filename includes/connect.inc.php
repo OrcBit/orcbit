@@ -1,14 +1,12 @@
 <?php
-$servername = "db_orcbit";
-$username = "orcbit";
-$password = "ontherun666";
+$conn_error = 'Kunne ikke forbinde til databasen.';
 
-// Create connection
-$conn = new mysqli($servername, $username, $password);
+if($db = mysqli_connect("localhost", "root", "", "orcbit")){
+}else{
+	die($conn_error);
+}
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
-echo "Connected successfully";
+if (!mysqli_set_charset($db, "utf8")) {
+    exit();
+}
 ?>

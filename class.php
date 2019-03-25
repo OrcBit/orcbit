@@ -1,4 +1,5 @@
 <?php
+    include 'includes/connect.inc.php';
     $class = 'Druid';
     include 'includes/header.inc.php';
     include 'includes/menu.inc.php';
@@ -25,6 +26,10 @@
                     <li>Addons, macros and tips n tricks</li>
                 </ul>
                 <h2>Introduction</h2>
+                <a href="https://classicdb.ch/?item=11923">The Hammer of Grace</a>
+                <a href="https://classicdb.ch/?npc=11502">The Hammer of Grace</a>
+                <a href="https://classicdb.ch/?spell=21899">The Hammer of Grace</a>
+
                 <p>ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu porttitor nisl. Aliquam nec leo nibh. Ut elementum sollicitudin massa at elementum. Duis condimentum elit vel mauris blandit, id egestas ligula porta. Nullam malesuada, sem vel sagittis consequat, quam mi luctus orci, in ultrices urna tellus eget ipsum. Phasellus sem lectus, mollis at finibus rutrum, congue nec dolor. Quisque tincidunt purus at nisl tincidunt finibus eu eu arcu. Morbi quis ullamcorper odio, at malesuada metus. Donec dui metus, feugiat et justo 
                     varius, tempus fermentum erat. Proin ultricies risus et lorem feugiat, a lacinia libero vestibulum. Nullam tortor est, maximus ut dolor quis, congue pharetra purus. Nulla risus tellus, posuere eget mi at, auctor faucibus odio. Mauris eu tellus sit amet velit efficitur vulputate nec cursus justo. Vivamus in nunc quis arcu pellentesque placerat</p>
                 <h2>Leveling</h2>
