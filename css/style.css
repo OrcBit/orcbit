@@ -392,3 +392,70 @@ nav #admin-nav{
     float: left;
     max-width: 40px;
 }
+
+/* GUIDE */
+
+.align{
+    vertical-align: bottom;
+}
+
+.text_image_section{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.guidefloat_right{
+    width:30%;
+    float: right;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.guidefloat_right img{
+    max-width: 100%;
+}
+
+.guidefloat_left{
+    width:30%;
+    float: left;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.guidefloat_left img{
+    max-width: 100%;
+}
+
+.left_text{
+    width:70%;
+    float: left;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.right_text{
+    width:70%;
+    float: right;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.clearit{
+    clear: both;
+}
+
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  height: 50px;
+  vertical-align: bottom;
+    padding: 5px;
+}

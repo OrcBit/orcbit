@@ -16,11 +16,8 @@
             echo '<li><a href="edit-guide.php?id='.$guide_id.'">'.$guide_name.'</a><li>';
         }
         echo '</ul>';
-    echo '';
-    
-    echo '';
 
-    echo '<form action="admin.php">';
+    echo '<form action="admin.php" method="post">';
         
         echo '<p>Guide Category</p>';
         
@@ -34,19 +31,17 @@
             echo '<option >'.$guide_name.'</option>';
         }
         echo '</select><br><br>';
-        echo '<input type="submit" value="Add Guide">';
+        echo '<input type="submit" name="submit" value="Add Guide">';
     echo '</form>';
     ?>
 </section>
 <?php
 if(isset($_POST["submit"])){
-    $name = $_POST["guide_name"];
     $category = $_POST["category"];
     
-    $query = "INSERT INTO guides VALUES('', '$name', '$category','', ''";
-    }
+    $query = "INSERT INTO guides VALUES('', '', '$category','', '', '')";
 	if($query_run = $db->query($query)){
-		header("location:add.php");
+		header("location:add-guide.php?category=$category");
 	}else{
 		echo '<h2 style="color:#fff">fejl</h2>';
 	}
