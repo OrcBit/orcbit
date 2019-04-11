@@ -1,7 +1,7 @@
 <?php
 $conn_error = 'Kunne ikke forbinde til databasen.';
 
-if($db = mysqli_connect("localhost", "root", "", "orcbit")){
+if($db = mysqli_connect("208.113.158.106", "orcbit", "ontherun666", "db_orcbit")){
 }else{
 	die($conn_error);
 }

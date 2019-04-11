@@ -105,6 +105,47 @@
                    
                     echo '<img src="../'.$path.'">';
                     }
+                }if($category == 'tabel'){
+                    echo '<table>';
+                    echo '<tr>';
+                        echo '<th>'.$section_id.'</th>';
+                        echo '<th>Item</th>';
+                        echo '<th>Source</th>';
+                        echo '<th>Enchant</th>';
+                        echo '<th>Source type</th>';
+                        echo '<th>Patch Notes</th>';
+                    echo '</tr>';
+                    // tæller hvor mange rows af tr vi skal have
+                    $tab_query = "SELECT * FROM tabels WHERE sectionID = '$section_id' ORDER BY tabelRow";
+                    $tab_query_run = $db->query($tab_query);
+                    $count = $tab_query_run->num_rows;
+                    
+                    $amount = $count + 1;
+
+                    // viser hvor mange gange den skal køre scriptet igennem indtil alle er blevet vist
+
+                    for ($i = 0; $i <= $amount; $i++) {
+                        $query = "SELECT * FROM tabels WHERE tabelRow = '$i'";
+                        $query_run = $db->query($query);
+                        echo '<tr>';
+                        while($row = mysqli_fetch_assoc($query_run)){
+                            $slot = $row["tabelSlot"];
+                            $item = $row["tabelItem"];
+                            $source = $row["tabelSource"];
+                            $enchant = $row["tabelEnchant"];
+                            $type = $row["tabelType"];
+                            $patch = $row["tabelPatch"];
+
+                            echo '<td>'.$slot.'</td>';
+                            echo '<td>'.$item.'</td>';
+                            echo '<td>'.$source.'</td>';
+                            echo '<td>'.$enchant.'</td>';
+                            echo '<td>'.$type.'</td>';
+                            echo '<td>'.$patch.'</td>';
+                        }
+                        echo '</tr>';
+                    }
+                    echo '</table><br>';
                 }
             }
         }else{
@@ -146,6 +187,20 @@
         
         echo '<form action="edit-guide.php?id='.$id.'&type=image" method="post" enctype="multipart/form-data">';
             echo '<input type="file" name="image" placeholder="title"><br>';
+            echo '<input type="submit" name="submit" placeholder="sumbit">';
+        echo '</form>';
+        
+        echo '<form action="edit-guide.php?id='.$id.'&type=tabel" method="post" enctype="multipart/form-data">';
+            echo '<select name="tabel">';
+        
+            $tabel_query = "SELECT * FROM tabels GROUP BY tabelName";
+            $tabel_query_run = $db->query($tabel_query);
+            while($tabel_row = mysqli_fetch_assoc($tabel_query_run)){
+                $tab_name = $tabel_row["tabelName"];
+                $tab_num = $tabel_row["tabelNumber"];   
+                echo '<option value="'.$tab_num.'">'.$tab_name.'</option>';
+            }
+            echo '</select><br>';
             echo '<input type="submit" name="submit" placeholder="sumbit">';
         echo '</form>';
         
@@ -221,6 +276,23 @@
                     $insert = "INSERT INTO sections_text VALUES('', '$insert_text', '$section_id')";
                     if($insert_run = $db->query($insert)){
                         header('location: edit-guide.php?id='.$id.'');
+                    }
+                }
+            }if($type == 'tabel'){
+                $tab_number = $_POST["tabel"];
+                $query = "INSERT INTO sections VALUES('', '$type', '$guide_id')";
+                
+                echo $tab_number;
+                if($query_run = $db->query($query)){
+                    $section_query = "SELECT * FROM sections WHERE sectionCategory = '$type' ORDER BY sectionID DESC LIMIT 1";
+                    $section_query_run = $db->query($section_query);
+                    $row = mysqli_fetch_assoc($section_query_run);
+
+                    $section_id = $row["sectionID"];
+
+                    $update = "UPDATE tabels SET sectionID = '$section_id' WHERE tabelNumber = '$tab_number'";
+                    if($update_run = $db->query($update)){
+                        header('location: edit-guide.php?id='.$tab_number.'');
                     }
                 }
             }if($type == 'imagesandwords'){

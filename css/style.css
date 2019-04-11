@@ -3,6 +3,12 @@ body{
     margin:0;
 }
 
+#stop{
+    width:100%;
+    height: 30px;
+    clear: both;
+}
+
 #wrapper{
     width:74%;
     margin: auto;

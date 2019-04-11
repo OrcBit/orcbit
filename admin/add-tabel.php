@@ -44,6 +44,8 @@ for ($i = 0; $i <= $count;) {
 }
 ?>
 </table>
+<div id="stop">
+</div>
 
 
 <form action="add-tabel.php" method="POST" enctype="multipart/form-data">
@@ -85,7 +87,7 @@ if(isset($_POST["submit"])){
     echo '<br><br>';
 
     
-    $sql = "INSERT INTO tabels VALUES('', 'Resto', '$slot', '$item', '$source', '$enchant', '$type', '$notes', '5', '1')";
+    $sql = "INSERT INTO tabels VALUES('', 'Resto', '$slot', '$item', '$source', '$enchant', '$type', '$notes', '5', '1', '')";
     if($sql_run = $db->query($sql)){
         echo 'Added to database';
     }else{
