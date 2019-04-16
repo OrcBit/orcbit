@@ -34,7 +34,7 @@ echo '<aside class="sidebarmenu">';
                                             echo '<img src="'.$icon.'" id="icon" />';   
                                         echo '</div>';
                                             echo '<button class="classes">';
-                                                echo '<li>'.$data_name.'<li>';
+                                                echo '<li>'.$data_name.'</a><li>';
                                             echo '</button>';
                                     }else{
                                         echo '<button class="classes">';
@@ -51,12 +51,13 @@ echo '<aside class="sidebarmenu">';
 
                                             echo '<ul>';
                                                 while($row = mysqli_fetch_assoc($guide_query_run)){
+                                                    $guide_id = $row['guideID'];
                                                     $guide_name = $row['guideName'];
                                                     $sub_icon = $row['dataIcon'];
                                                     echo '<div class="menu_left">';
                                                         echo '<img src="'.$sub_icon.'" id="icon" />';   
                                                     echo '</div><br>';
-                                                    echo '<li>'.$guide_name.'</li>';
+                                                    echo '<li><a href="class.php?id='.$guide_id.'">'.$guide_name.'</a></li>';
                                                 }
                                             echo '</ul>';
                                         }

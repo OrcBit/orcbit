@@ -153,56 +153,58 @@
                 echo '<p>Nothing Here Yet</p>';
             echo '</div>';
         }
-        echo '<form action="edit-guide.php?id='.$id.'&type=video" method="post" enctype="multipart/form-data">';
-            echo '<input type="text" name="video" placeholder="video URL">';
-            echo '<input type="submit" name="submit" placeholder="sumbit"><br><br>';
-        echo '</form>';
-        
-        echo '<form action="edit-guide.php?id='.$id.'&type=header" method="post" enctype="multipart/form-data">';
-            echo '<input type="text" name="header" placeholder="header">';
-            echo '<input type="submit" name="submit" placeholder="sumbit"><br><br>';
-        echo '</form>';
-        
-        echo '<form action="edit-guide.php?id='.$id.'&type=headerandtext" method="post" enctype="multipart/form-data">';
-            echo '<input type="text" name="title" placeholder="Title & text"><br>';
-            echo '<textarea name="text" placeholder="text"></textarea><br>';
-            echo '<input type="submit" name="submit" placeholder="sumbit"><br><br>';
-        echo '</form>';
-        
-        echo '<form action="edit-guide.php?id='.$id.'&type=text" method="post" enctype="multipart/form-data">';
-            echo '<textarea name="text" placeholder="text"></textarea><br>';
-            echo '<input type="submit" name="submit" placeholder="sumbit"><br><br>';
-        echo '</form>';
-        
-        echo '<form action="edit-guide.php?id='.$id.'&type=imagesandwords" method="post" enctype="multipart/form-data">';
-            echo '<textarea name="text" placeholder="text"></textarea><br>';
-            echo '<input type="file" name="image" placeholder="title"><br>';
-            echo '<select name="float"><br><br>';
-            echo 'Image: left or right';
-            echo '<option>right</option>';
-            echo '<option>left</option>';
-            echo '</select>';
-            echo '<input type="submit" name="submit" placeholder="sumbit">';
-        echo '</form>';
-        
-        echo '<form action="edit-guide.php?id='.$id.'&type=image" method="post" enctype="multipart/form-data">';
-            echo '<input type="file" name="image" placeholder="title"><br>';
-            echo '<input type="submit" name="submit" placeholder="sumbit">';
-        echo '</form>';
-        
-        echo '<form action="edit-guide.php?id='.$id.'&type=tabel" method="post" enctype="multipart/form-data">';
-            echo '<select name="tabel">';
-        
-            $tabel_query = "SELECT * FROM tabels GROUP BY tabelName";
-            $tabel_query_run = $db->query($tabel_query);
-            while($tabel_row = mysqli_fetch_assoc($tabel_query_run)){
-                $tab_name = $tabel_row["tabelName"];
-                $tab_num = $tabel_row["tabelNumber"];   
-                echo '<option value="'.$tab_num.'">'.$tab_name.'</option>';
-            }
-            echo '</select><br>';
-            echo '<input type="submit" name="submit" placeholder="sumbit">';
-        echo '</form>';
+        echo '<div id="cms_forms">';
+            echo '<form action="edit-guide.php?id='.$id.'&type=video" method="post" enctype="multipart/form-data">';
+                echo '<input type="text" name="video" placeholder="video URL">';
+                echo '<input type="submit" class="submit" name="submit" placeholder="sumbit"><br><br>';
+            echo '</form>';
+
+            echo '<form action="edit-guide.php?id='.$id.'&type=header" method="post" enctype="multipart/form-data">';
+                echo '<input type="text" name="header" placeholder="header">';
+                echo '<input type="submit" class="submit" name="submit" placeholder="sumbit"><br><br>';
+            echo '</form>';
+
+            echo '<form action="edit-guide.php?id='.$id.'&type=headerandtext" method="post" enctype="multipart/form-data">';
+                echo '<input type="text" name="title" placeholder="Title & text"><br>';
+                echo '<textarea name="text" placeholder="text"></textarea><br>';
+                echo '<input type="submit" class="submit" name="submit" placeholder="sumbit"><br><br>';
+            echo '</form>';
+
+            echo '<form action="edit-guide.php?id='.$id.'&type=text" method="post" enctype="multipart/form-data">';
+                echo '<textarea name="text" placeholder="text"></textarea><br>';
+                echo '<input type="submit" class="submit" name="submit" placeholder="sumbit"><br><br>';
+            echo '</form>';
+
+            echo '<form action="edit-guide.php?id='.$id.'&type=imagesandwords" method="post" enctype="multipart/form-data">';
+                echo '<textarea name="text" placeholder="text"></textarea><br>';
+                echo '<input type="file" name="image" placeholder="title"><br>';
+                echo '<select name="float"><br><br>';
+                echo 'Image: left or right';
+                echo '<option>right</option>';
+                echo '<option>left</option>';
+                echo '</select>';
+                echo '<input type="submit" class="submit" name="submit" placeholder="sumbit">';
+            echo '</form>';
+
+            echo '<form action="edit-guide.php?id='.$id.'&type=image" method="post" enctype="multipart/form-data">';
+                echo '<input type="file" name="image" placeholder="title"><br>';
+                echo '<input type="submit" class="submit" name="submit" placeholder="sumbit">';
+            echo '</form>';
+
+            echo '<form action="edit-guide.php?id='.$id.'&type=tabel" method="post" enctype="multipart/form-data">';
+                echo '<select name="tabel">';
+
+                $tabel_query = "SELECT * FROM tabels GROUP BY tabelName";
+                $tabel_query_run = $db->query($tabel_query);
+                while($tabel_row = mysqli_fetch_assoc($tabel_query_run)){
+                    $tab_name = $tabel_row["tabelName"];
+                    $tab_num = $tabel_row["tabelNumber"];   
+                    echo '<option value="'.$tab_num.'">'.$tab_name.'</option>';
+                }
+                echo '</select><br>';
+                echo '<input type="submit" class="submit" name="submit" placeholder="sumbit">';
+            echo '</form>';
+        echo '</div>';
         
     }
     if(isset($_POST["submit"])){
