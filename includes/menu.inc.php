@@ -29,12 +29,13 @@ echo '<aside class="sidebarmenu">';
                                         $class_query_run = $db->query($class_query);
                                         $rows = mysqli_fetch_assoc($class_query_run);
                                         
+                                        $color = $rows['classColor'];
                                         $icon = $rows['classIcon'];
                                         echo '<div class="menu_left">';
                                             echo '<img src="'.$icon.'" id="icon" />';   
                                         echo '</div>';
                                             echo '<button class="classes">';
-                                                echo '<li>'.$data_name.'</a><li>';
+                                                echo '<li style="color:'.$color.'">'.$data_name.'</a><li>';
                                             echo '</button>';
                                     }else{
                                         echo '<button class="classes">';

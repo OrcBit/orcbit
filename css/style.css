@@ -168,52 +168,17 @@ nav img{
     background-image: url("../images/paper-repeat.jpg");
     background-repeat: repeat;
     display: block;
-    float: left;
-}
-
-#content h1{
-}
-
-#content h2{
-}
-
-#content p{
+    
 }
 
 #content img{
     max-width: 100%;
 }
 
-h1{
-    font-family: 'lifecraftfont';
-    src: url('../fonts/lifecraftfont.woff'); 
-    font-size: 200%;
-    color: #e9d839;
-    text-shadow: 2px 2px 5px #000000;
-    padding-left: 10px;
-}
 
-h2{
-    font-size: 130%;
-    font-family: 'lifecraftfont';
-    src: url('../fonts/lifecraftfont.woff'); 
-    color: #e9d839;
-    text-shadow: 2px 2px 5px #000000;
-    padding-left: 10px;
-    margin: 0;
-}
-
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 100%;
-    padding-left: 10px;
-    margin-bottom: 5px;
-    font-
-
-}
 
 #youtube_video{
-    width:100%;
+    max-width:100%;
 }
 
 /* shit fra tim */
@@ -396,10 +361,15 @@ nav #admin-nav{
 
 .icon_left img{
     float: left;
-    max-width: 40px;
+    max-width: 20px;
 }
 
 /* GUIDE */
+
+.content-wrapper{
+    width: 90%;
+    margin: auto;
+}
 
 .align{
     vertical-align: bottom;
@@ -467,6 +437,30 @@ nav #admin-nav{
     padding: 5px;
 }
 
+#content {
+    clear: both;
+    text-align: center;
+    align-content: center;
+}
+
+.classheader h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+#content h2, h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#content p {
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    
+
+}
 
 /* CMS */
 
