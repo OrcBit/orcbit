@@ -3,18 +3,24 @@
 echo '<aside class="sidebarmenu">';
     echo '<div class="sidebarmenudiv">';
         echo '<div class="sidebar">';
+            echo '<ul id="menu_list">';
             $category_query = "SELECT * FROM category";
             $category_query_run = $db->query($category_query);
             while($row = mysqli_fetch_assoc($category_query_run)){
                 $category_name = $row['categoryName'];
-               
-                echo '<button class="accordion">'.$category_name.'</button>';
-                
+                $category_icon = $row['categoryIcon'];
+                echo '<div class="menu_point">';
+                    echo '<img src="'.$category_icon.'" class="menu_icon"/>';
+                    echo '<li>'.$category_name.'</li>';
+                    echo '<div class="plusit">';
+                    echo '<a class="menu_plus">+</a>';
+                    echo '</div>';
+                echo '</div>';
                 $guides_query = "SELECT * FROM guides WHERE guideCategory = '$category_name' GROUP BY dataName ORDER BY guideName";
                 $guides_query_run = $db->query($guides_query);
                 $amount = $guides_query_run->num_rows;
                                 
-                echo '<div class="panel">';
+                echo '<ul class="sub_menu">';
                     if($amount > 0){
                             echo '<ul id="menu_categories">';
                                 while($row = mysqli_fetch_assoc($guides_query_run)){
@@ -33,13 +39,13 @@ echo '<aside class="sidebarmenu">';
                                         echo '<div class="menu_left">';
                                             echo '<img src="'.$icon.'" id="icon" />';   
                                         echo '</div>';
-                                            echo '<button class="classes">';
+                                            echo '<ul class="classes">';
                                                 echo '<li>'.$data_name.'</a><li>';
-                                            echo '</button>';
+                                            echo '</ul>';
                                     }else{
-                                        echo '<button class="classes">';
+                                        echo '<ul class="classes">';
                                             echo '<li>'.$data_name.'<li>';
-                                        echo '</button>';
+                                        echo '</ul>';
                                     }
                                     
                                     $guide_query = "SELECT * FROM guides WHERE guideCategory = '$guide_category' AND dataID = '$data_id' ORDER BY guideName";
@@ -66,7 +72,7 @@ echo '<aside class="sidebarmenu">';
                                 }
                             echo '</ul>';
                     }
-                echo '</div>';
+                echo '</ul>';
             }
         echo '</div>';
     echo '</div>';

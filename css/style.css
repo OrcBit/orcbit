@@ -14,9 +14,6 @@ body{
     margin: auto;
 }
 
-ul{
-    padding-inline-start: 10px;
-}
 
 header p{
     position: absolute;
@@ -69,6 +66,7 @@ nav ul li{
     position: absolute;
     margin-left: 9.5%;
     top: 40px;
+    pointer-events: none;
 }
 
 nav img{
@@ -105,22 +103,8 @@ nav img{
     background-size: cover;
 }
 
-.sidebarmenu{
-    width:20%;
-    height: 1080px;
-    background-color: rgba(0, 0, 0, 0.5);
-    clear: both;
-    display: block;
-    float: left; 
-}
-
-.menu_left{
-    width:15%;
-    float: left;
-}
 
 #menu_categories img{
-    max-width:100%;
     border-radius: 100%;
 }
 
@@ -171,15 +155,6 @@ nav img{
     float: left;
 }
 
-#content h1{
-}
-
-#content h2{
-}
-
-#content p{
-}
-
 #content img{
     max-width: 100%;
 }
@@ -203,117 +178,105 @@ h2{
     margin: 0;
 }
 
-p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 100%;
-    padding-left: 10px;
-    margin-bottom: 5px;
-    font-
-
-}
 
 #youtube_video{
     width:100%;
 }
 
-/* shit fra tim */
+/* menu */
 
- .accordion {
-            cursor: pointer;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 18px;
-            transition: 0.4s;
-            text-transform: uppercase;
-        }
+.sidebarmenu{
+    width:20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    float: left; 
+}
 
-        .active,
-        .accordion:hover {
-            background-color: rgba(0, 0, 0, 0.4);
-        }
+.menu_left{
+    width:15%;
+}
 
-        .panel {
-            display: none;
-            overflow: hidden;
-            clear: both;
-        }
+.sidebar ul{
+    list-style: none;
+    padding-inline-start: 0px;
+}
 
-        .sidebar ul {
-            text-decoration: none;
-            list-style-type: none;
+#menu_list{
+    width:100%;
+    height: auto;
+    margin-top: 7vh;
+}
 
-        }
+#menu_list{
+    width:100%;
+    height: auto;
+    margin-top: 7vh;
+    vertical-align:middle;
+}
 
-        @font-face {
-            font-family: 'lifecraftfont';
-            src: url('../fonts/lifecraftfont.woff');
-        }
+.menu_point{
+    width: 100%;
+    height: auto;
+    background-color:#1e344d;
+    border-radius: 5px;
+    border:solid;
+    border-width: 0.5px;
+    border-color:#5f738a;
+    padding: 0.5vw;
+    overflow:auto;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 5px;
+    cursor: pointer;
+    vertical-align: middle;
+}
 
-        .sidebar {
-            padding-top: 50px;
-            color: #e9d839;
-            margin: 0;
-        }
+.menu_point img{
+    max-width: 100%;
+    border:solid;
+    border-width: 1px;
+    border-color:#e9d839;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    vertical-align: middle;
+}
 
+.menu_point li{
+    float: left;
+    color:#e9d839;
+    margin-left: 2%;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    font-weight: bold;
+    vertical-align:middle;
+}
 
-        .sidebar,
-        button {
-            font-family: 'lifecraftfont';
-            color: #e9d839;
-            background-color: Transparent;
-        }
+.sub_menu{
+    display: none;
+}
 
-        /* unvisited link */
-        a:link {
-            color: #e9d839;
-            text-decoration: none;
+.menu_icon{
+    width: 10%;
+    float: left;
+}
 
-        }
+.plusit{
+    float: right;
+    color:#fff;
+}
 
-        /* visited link */
-        a:visited {
-            color: #e9d839;
-            text-decoration: none;
-        }
-
-        /* mouse over link */
-        a:hover {
-            color: hotpink;
-        }
-
-        /* selected link */
-        a:active {
-            color: blue;
-        }
-
-        .classes {
-            background: none;
-            cursor: pointer;
-            width: 85%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-            float: left;
-        }
-
-        .druid {
-            color: #FF7D0A !important;
-        }
-
-        .druid a {
-            color: #FF7D0A !important;
-        }
-        
-                .paladin a {
-            color: #F58CBA !important;
-        }
-                .paladin{
-            color: #F58CBA !important;
-        }
+.plusit a{
+    font-size: 1.25vw;
+    padding-left:0.25vw;
+    padding-right:0.25vw;
+    background-color: #660e0e;
+    border:solid;
+    border-width: 0.1vw;
+    border-color:#e9d839;
+    color:#e9d839;
+    font-weight: 700;
+}
 
 
 /* ADMIN */
@@ -481,7 +444,6 @@ nav #admin-nav{
     border-radius: 5px;
     border:none;
 }
-
 #cms_forms select{
     width:100%;
     height:30px; 
