@@ -7,20 +7,13 @@
     echo '<section class="maincontent">';
     echo '<div class="wrapper">';
     echo '<div id="content">';
+        echo '<div class="content-wrapper">';
     if(isset($_GET['id'])){
         $id = $_GET['id'];
         $guide_id = $_GET['id'];
         $guides_query = "SELECT * FROM guides WHERE guideID = '$id'";
         $guides_query_run = $db->query($guides_query);
-        while($row = mysqli_fetch_assoc($guides_query_run)){
-            
-            $guide_name = $row['guideName'];
-            $guide_icon = $row['dataIcon'];
-            echo '<div class="icon_left">';
-                echo '<img src="./'.$guide_icon.'"/>';
-                echo '<h2>'.$guide_name.'</h2>';
-            echo '</div>';
-        }
+        
         
         $guides_query = "SELECT * FROM sections WHERE guideID = '$id'";
         $guides_query_run = $db->query($guides_query);
@@ -47,8 +40,9 @@
                     $header_query_run = $db->query($header_query);
                     $header_row = mysqli_fetch_assoc($header_query_run);
                     $content = $header_row["headerContent"];
-                    
+                    echo '<div class="classheader">';
                     echo '<h1>'.$content.'</h1>';
+                    echo '</div>';
 
                 }if($category == 'header and text'){
                     $ht_query = "SELECT * FROM sections_header_text WHERE sectionID = '$section_id'";
@@ -154,6 +148,7 @@
                 echo '<p>Nothing Here Yet</p>';
             echo '</div>';
         }
+        echo '</div>';
     echo '</div>';
     echo '</div>';
 echo '</section>';

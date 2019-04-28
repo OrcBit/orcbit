@@ -159,27 +159,108 @@ nav img{
     max-width: 100%;
 }
 
-h1{
-    font-family: 'lifecraftfont';
-    src: url('../fonts/lifecraftfont.woff'); 
-    font-size: 200%;
-    color: #e9d839;
-    text-shadow: 2px 2px 5px #000000;
-    padding-left: 10px;
+
+.content-wrapper{
+    width: 90%;
+    margin: auto;
 }
 
-h2{
-    font-size: 130%;
-    font-family: 'lifecraftfont';
-    src: url('../fonts/lifecraftfont.woff'); 
-    color: #e9d839;
-    text-shadow: 2px 2px 5px #000000;
-    padding-left: 10px;
-    margin: 0;
+.align{
+    vertical-align: bottom;
 }
 
+.text_image_section{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.guidefloat_right{
+    width:30%;
+    float: right;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.guidefloat_right img{
+    max-width: 100%;
+}
+
+.guidefloat_left{
+    width:30%;
+    float: left;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.guidefloat_left img{
+    max-width: 100%;
+}
+
+.left_text{
+    width:70%;
+    float: left;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.right_text{
+    width:70%;
+    float: right;
+    display:inline-block;
+    vertical-align:middle;
+}
+
+.clearit{
+    clear: both;
+}
+
+#content table, td, th {
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 100%;
+}
+
+#content table {
+  border-collapse: collapse;
+}
+
+#content td {
+  height: 50px;
+  vertical-align: bottom;
+    padding: 5px;
+}
+
+#content {
+    clear: both;
+    text-align: center;
+    align-content: center;
+}
+
+.classheader h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+#content h2, h1{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#content p {
+    text-align: justify;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    
+}
 
 #youtube_video{
+    width:100%;
+    margin-top: 20px;
+}
+
+#youtube_video iframe{
     width:100%;
 }
 
