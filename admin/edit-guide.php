@@ -21,7 +21,7 @@
             echo '</div>';
         }
         
-        $guides_query = "SELECT * FROM sections WHERE guideID = '$id'";
+        $guides_query = "SELECT sectionID, sectionCategory FROM sections WHERE guideID = '$id'";
         $guides_query_run = $db->query($guides_query);
         
         $amount = $guides_query_run->num_rows;
@@ -34,7 +34,7 @@
                 
                
                 if($category == 'video'){
-                    $video_query = "SELECT * FROM sections_video WHERE sectionID = '$section_id'";
+                    $video_query = "SELECT videoURL FROM sections_video WHERE sectionID = '$section_id'";
                     $video_query_run = $db->query($video_query);
                     $video_row = mysqli_fetch_assoc($video_query_run);
                     $url = $video_row["videoURL"];
@@ -42,7 +42,7 @@
                     echo $url;
 
                 }if($category == 'header'){
-                    $header_query = "SELECT * FROM sections_header WHERE sectionID = '$section_id'";
+                    $header_query = "SELECT headerContent FROM sections_header WHERE sectionID = '$section_id'";
                     $header_query_run = $db->query($header_query);
                     $header_row = mysqli_fetch_assoc($header_query_run);
                     $content = $header_row["headerContent"];
@@ -50,7 +50,7 @@
                     echo '<h1>'.$content.'</h1>';
 
                 }if($category == 'header and text'){
-                    $ht_query = "SELECT * FROM sections_header_text WHERE sectionID = '$section_id'";
+                    $ht_query = "SELECT headertextTitle, headertextContent FROM sections_header_text WHERE sectionID = '$section_id'";
                     if($ht_query_run = $db->query($ht_query)){
                     $ht_row = mysqli_fetch_assoc($ht_query_run);
                     $title = $ht_row["headertextTitle"];
@@ -60,7 +60,7 @@
                     echo '<p>'.$text.'</p>';
                     }
                 }if($category == 'text'){
-                    $ht_query = "SELECT * FROM sections_text WHERE sectionID = '$section_id'";
+                    $ht_query = "SELECT textContent FROM sections_text WHERE sectionID = '$section_id'";
                     if($ht_query_run = $db->query($ht_query)){
                     $ht_row = mysqli_fetch_assoc($ht_query_run);
                     $text = $ht_row["textContent"];
@@ -68,7 +68,7 @@
                     echo '<p>'.$text.'</p>';
                     }
                 }if($category == 'images and words'){
-                    $ht_query = "SELECT * FROM sections_text_images WHERE sectionID = '$section_id'";
+                    $ht_query = "SELECT textContent, imagePath, imageFloat FROM sections_text_images WHERE sectionID = '$section_id'";
                     if($ht_query_run = $db->query($ht_query)){
                     $ht_row = mysqli_fetch_assoc($ht_query_run);
                     $text = $ht_row["textContent"];
@@ -98,7 +98,7 @@
                     echo '</div>';
                     }
                 }if($category == 'image'){
-                    $ht_query = "SELECT * FROM sections_image WHERE sectionID = '$section_id'";
+                    $ht_query = "SELECT imagePath FROM sections_image WHERE sectionID = '$section_id'";
                     if($ht_query_run = $db->query($ht_query)){
                     $ht_row = mysqli_fetch_assoc($ht_query_run);
                     $path = $ht_row["imagePath"];
