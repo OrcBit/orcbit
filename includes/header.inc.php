@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700%7COpen+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
     <link rel="icon" href="orcbitlogo.png">
 </head>
 
@@ -17,14 +18,17 @@
         <p>BETA</p>
         <nav>
             <div id="logo">
-                <img src="images/logo.png" alt="logo"/>
+                <img src="images/logo.png" alt="logo" />
             </div>
             <ul>
-                <li>Support </li>
-                <li>Contact</li>
-                <li>About</li>
-                <li>News</li>
-                <li><a href="index.php">Home</a></li>
+
+
+                <li><a href="https://www.orcbit.tv/about.php">About </a></li>
+                <li><a href="https://www.orcbit.tv/contact.php">Contact </a></li>
+                <li><a href="https://www.orcbit.tv/support.php">Support </a></li>
+                <li><a href="https://www.orcbit.tv/news.php">News </a></li>
+                <li><a href="https://www.orcbit.tv/index.php">Home </a></li>
+
             </ul>
         </nav>
         <div id="steel_border">
@@ -35,6 +39,7 @@
         <div id="image-left">
         </div>
         <div id="image-right">
+
         </div>
     </div>
-<div id="wrapper">
+    <div id="wrapper">
