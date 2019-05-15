@@ -560,39 +560,172 @@ nav #admin-nav{
 
 /* CMS */
 
-#cms_forms form{
-    width:90%;
-    margin: auto;
+#cms_wrapper{
+  width:96%;
+  margin:auto;
 }
 
-#cms_forms input{
-    width:100%;
-    height: 30px;
-    border-radius: 5px;
-    border:none;
+#cms_forms{
+  width:100%;
 }
-#cms_forms select{
-    width:100%;
-    height:30px; 
-}
-
+  
 #cms_forms textarea{
-    width:100%;
-    height:120px; 
+  width:100%;
+  height:250px;
+  background-color:#ebebeb;
+  border-left:solid;
+  border-right:solid;
+  border-bottom:solid;
+  border-top:none;
+  border-width:2px;
+  border-color:#363636;
+  display:block;
+    	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
-#cms_forms .submit{
-    width:12%;
-    height:26px; 
-    float: right;
-    background-color:#666;
-    color:#fff;
-    font-weight: bold;
-    font-size: 13px;
-    margin-top: 5px;
-    margin-bottom: 35px;
+#cms_wrapper button{
+  width:12.5%;
+  height:25px;
+  border-bottom:solid;
+  border-width:2px;
+  border-color:#363636;
+  float:left;
+  font-size:0.9em;
+  text-align:center;
+  display:block;
 }
+  
+#cms_wrapper input.submit{
+  width:15%;
+  height:30px;
+  background-color:#363636;
+  float:right;
+  font-size:0.9em;
+  text-align:center;
+  display:block;
+  color:#fff;
+  border:none;
+  margin-top:5px;
+}
+  
+.cms_box{
+  width:100%;
+  height:250px;
+  background-color:#ebebeb;
+  border-left:solid;
+  border-right:solid;
+  border-bottom:solid;
+  border-top:none;
+  border-width:2px;
+  border-color:#363636;
+  display:block;
+  clear:both;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+  
+.cms_box_small{
+  width:100%;
+  height:30px;
+  background-color:#ebebeb;
+  border-left:solid;
+  border-right:solid;
+  border-bottom:solid;
+  border-top:none;
+  border-width:2px;
+  border-color:#363636;
+  display:block;
+  clear:both;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+  
+.cms_box_small_b{
+  width:100%;
+  height:50px;
+  background-color:#ebebeb;
+  border-left:solid;
+  border-right:solid;
+  border-bottom:solid;
+  border-top:none;
+  border-width:2px;
+  border-color:#363636;
+  display:block;
+  clear:both;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+  
+.cms_box input{
+  width:96%;
+  height:30px;
+  background-color:#FFF;
+  display:block;
+  border-radius:2px;
+  border:none;
+  position:relative;
+  top:10px;
+  float:left;
+  margin-left:2%;
+}
+  
 
-
-
-
+.cms_box_small input{
+  width:70%;
+  height:30px;
+  background-color:#FFF;
+  display:block;
+  border-radius:2px;
+  border:none;
+  margin:auto;
+  position:relative;
+  top:10px;
+  float:left;
+}
+  
+.cms_box_small_b input{
+  width:70%;
+  height:30px;
+  background-color:#FFF;
+  display:block;
+  border-radius:2px;
+  border:none;
+  margin:auto;
+  position:relative;
+  top:10px;
+  float:left;
+  margin-left:2%;
+}
+  
+.cms_box_small_b select{
+  width:24%;
+  height:30px;
+  background-color:#FFF;
+  display:block;
+  border-radius:2px;
+  border:none;
+  position:relative;
+  top:10px;
+  float:right;
+  margin-right:2%;
+}
+  
+#cms_forms textarea.smalltextarea{
+  width:100%;
+  height:30px;
+}
+  
+#cms_forms textarea.mediumtextarea{
+  width:100%;
+  height:220px;
+}
+  
+#cms_forms textarea.medium_b_textarea{
+  width:100%;
+  height:200px;
+}

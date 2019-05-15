@@ -1,5 +1,6 @@
-function player(val){
-	$("#function").load("adminfunction.php?id=" + val);
+function cmsload(object) {
+  	$("#cms_forms").load("./load/load.php?input=" + object);
+  	console.log(object);
 }
 
 function dosomething(val){
