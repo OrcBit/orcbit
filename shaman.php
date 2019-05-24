@@ -1,51 +1,237 @@
-<?php
-    $class = 'Druid';
-    include 'includes/header.inc.php';
-    include 'includes/menu.inc.php';
-?>
-<!--main content page-->
-<section class="maincontent">
-    <div class="wrapper">
-        <div id="guide_image">
-            <img src="images/shaman.jpg" alt="shaman" />
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .accordion {
+            background-color: #444;
+
+            cursor: pointer;
+            padding: 8px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #000;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .sidebar ul {
+            text-decoration: none;
+            list-style-type: none;
+
+        }
+
+        @font-face {
+            font-family: 'lifecraftfont';
+            src: url('../fonts/lifecraftfont.woff');
+        }
+
+        .sidebar {
+            color: #e9d839;
+
+
+            margin: 0;
+        }
+
+
+        .sidebar,
+        button {
+            font-family: 'lifecraftfont';
+            color: #e9d839;
+        }
+
+        /* unvisited link */
+        a:link {
+            color: #e9d839;
+            text-decoration: none;
+
+        }
+
+        /* visited link */
+        a:visited {
+            color: #e9d839;
+            text-decoration: none;
+        }
+
+        /* mouse over link */
+        a:hover {
+            color: hotpink;
+        }
+
+        /* selected link */
+        a:active {
+            color: blue;
+        }
+
+        .classes {
+
+            background: none;
+            cursor: pointer;
+            padding: 8px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .druid {
+            color: #FF7D0A !important;
+        }
+
+        .druid a {
+            color: #FF7D0A !important;
+        }
+        
+                .paladin a {
+            color: #F58CBA !important;
+        }
+                .paladin{
+            color: #F58CBA !important;
+        }
+
+        Hunter Mage Paladin Priest Rogue Shaman Warlock Warrior
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>Accordion</h2>
+
+        <button class="accordion">General</button>
+        <div class="panel">
+            <ul>
+                <li><a href="#">Gold Making Guide</a></li>
+                <li><a href="#">Levelling Guide</a></li>
+                <li><a href="#">Reputation Guide</a></li>
+            </ul>
         </div>
-        <div id="content">
-            <div class="wrapper">
-                <h1>Shaman Guide</h1>
-                <div id="youtube_video">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/OtRmvlZrvbw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <button class="accordion">Class Guides</button>
+        <div class="panel">
+            <ul>
+
+                <!-- Druid class guide start -->
+                
+                <button class="classes">
+
+                    <li><a href="#" class="druid">Druid</a></li>
+                </button>
+                <div class="panel">
+                    <ul class="druid">
+                        <li><a href="#">Balance</a></li>
+                        <li><a href="#">Feral</a></li>
+                        <li><a href="#">Restoration</a></li>
+                    </ul>
                 </div>
-                <h2>General druid guide for classic world of warcraft</h2>
-                <p>Overview</p>
-                <ul>
-                    <li>Leveling</li>
-                    <li>Gearing and stats</li>
-                    <li>PVE</li>
-                    <li>PVP</li>
-                    <li>Addons, macros and tips n tricks</li>
-                </ul>
-                <h2>Introduction</h2>
-                <p>ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu porttitor nisl. Aliquam nec leo nibh. Ut elementum sollicitudin massa at elementum. Duis condimentum elit vel mauris blandit, id egestas ligula porta. Nullam malesuada, sem vel sagittis consequat, quam mi luctus orci, in ultrices urna tellus eget ipsum. Phasellus sem lectus, mollis at finibus rutrum, congue nec dolor. Quisque tincidunt purus at nisl tincidunt finibus eu eu arcu. Morbi quis ullamcorper odio, at malesuada metus. Donec dui metus, feugiat et justo 
-                    varius, tempus fermentum erat. Proin ultricies risus et lorem feugiat, a lacinia libero vestibulum. Nullam tortor est, maximus ut dolor quis, congue pharetra purus. Nulla risus tellus, posuere eget mi at, auctor faucibus odio. Mauris eu tellus sit amet velit efficitur vulputate nec cursus justo. Vivamus in nunc quis arcu pellentesque placerat</p>
-                <h2>Leveling</h2>
-                <p>ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu porttitor nisl. Aliquam nec leo nibh. Ut elementum sollicitudin massa at elementum. Duis condimentum elit vel mauris blandit, id egestas ligula porta. Nullam malesuada, sem vel sagittis consequat, quam mi luctus orci, in ultrices urna tellus eget ipsum. Phasellus sem lectus, mollis at finibus rutrum, congue nec dolor. Quisque tincidunt purus at nisl tincidunt finibus eu eu arcu. Morbi quis ullamcorper odio, at malesuada metus. Donec dui metus, feugiat et justo</p>
-                <img src="images/leveling.jpg" alt="leveling"/>
-                <p>varius, tempus fermentum erat. Proin ultricies risus et lorem feugiat, a lacinia libero vestibulum. Nullam tortor est, maximus ut dolor quis, congue pharetra purus. Nulla risus tellus, posuere eget mi at, auctor faucibus odio. Mauris eu tellus sit amet velit efficitur vulputate nec cursus justo. Vivamus in nunc quis arcu pellentesque placerat</p>
-                <h2>Gearing and stats</h2>
-                <p>ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu porttitor nisl. Aliquam nec leo nibh. Ut elementum sollicitudin massa at elementum. Duis condimentum elit vel mauris blandit, id egestas ligula porta. Nullam malesuada, sem vel sagittis consequat, quam mi luctus orci, in ultrices urna tellus eget ipsum. Phasellus sem lectus, mollis at finibus rutrum, congue nec dolor. Quisque tincidunt purus at nisl tincidunt finibus eu eu arcu. Morbi quis ullamcorper odio, at malesuada metus. Donec dui metus, feugiat et justo</p>
-                <img src="images/leveling.jpg" alt="leveling"/>
-                <p>varius, tempus fermentum erat. Proin ultricies risus et lorem feugiat, a lacinia libero vestibulum. Nullam tortor est, maximus ut dolor quis, congue pharetra purus. Nulla risus tellus, posuere eget mi at, auctor faucibus odio. Mauris eu tellus sit amet velit efficitur vulputate nec cursus justo. Vivamus in nunc quis arcu pellentesque placerat</p>
-                <h2>PVE</h2>
-                <p>ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu porttitor nisl. Aliquam nec leo nibh. Ut elementum sollicitudin massa at elementum. Duis condimentum elit vel mauris blandit, id egestas ligula porta. Nullam malesuada, sem vel sagittis consequat, quam mi luctus orci, in ultrices urna tellus eget ipsum. Phasellus sem lectus, mollis at finibus rutrum, congue nec dolor. Quisque tincidunt purus at nisl tincidunt finibus eu eu arcu. Morbi quis ullamcorper odio, at malesuada metus. Donec dui metus, feugiat et justo</p>
-                <h2>PVP</h2>
-                <p>ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu porttitor nisl. Aliquam nec leo nibh. Ut elementum sollicitudin massa at elementum. Duis condimentum elit vel mauris blandit, id egestas ligula porta. Nullam malesuada, sem vel sagittis consequat, quam mi luctus orci, in ultrices urna tellus eget ipsum. Phasellus sem lectus, mollis at finibus rutrum, congue nec dolor. Quisque tincidunt purus at nisl tincidunt finibus eu eu arcu. Morbi quis ullamcorper odio, at malesuada metus. Donec dui metus, feugiat et justo</p>
-                <h2>Addons, macros tips and tricks</h2>
-                <p>ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu porttitor nisl. Aliquam nec leo nibh. Ut elementum sollicitudin massa at elementum. Duis condimentum elit vel mauris blandit, id egestas ligula porta. Nullam malesuada, sem vel sagittis consequat, quam mi luctus orci, in ultrices urna tellus eget ipsum. Phasellus sem lectus, mollis at finibus rutrum, congue nec dolor. Quisque tincidunt purus at nisl tincidunt finibus eu eu arcu. Morbi quis ullamcorper odio, at malesuada metus. Donec dui metus, feugiat et justo</p>
-            </div>
+
+                <!-- Druid class guide end -->
+
+
+
+                <li><a href="#">Hunter</a></li>
+                <li><a href="#">Mage</a></li>
+                
+                                <!-- Paladin class guide start -->
+                
+                <button class="classes">
+
+                    <li><a href="#" class="paladin">Paladin</a></li>
+                </button>
+                <div class="panel">
+                    <ul class="paladin">
+                        <li><a href="#">Holy</a></li>
+                        <li><a href="#">Protection</a></li>
+                        <li><a href="#">Retribution</a></li>
+                    </ul>
+                </div>
+
+                <!-- paladin class guide end -->
+                
+                
+                
+                <li><a href="#">Priest</a></li>
+                <li><a href="#">Rogue</a></li>
+                <li><a href="#">Shaman</a></li>
+                <li><a href="#">Warlock</a></li>
+                <li><a href="#">Warrior</a></li>
+
+            </ul>
+        </div>
+
+        <button class="accordion">PvE</button>
+        <div class="panel">
+            <p>insert nav</p>
+        </div>
+
+        <button class="accordion">PvP</button>
+        <div class="panel">
+            <p>insert nav</p>
+        </div>
+
+        <button class="accordion">Attunements</button>
+        <div class="panel">
+            <ul>
+                <li><a href="#">Molten Core</a></li>
+                <li><a href="#">Onyxia</a></li>
+                <li><a href="#">Blackwing Lair</a></li>
+                <li><a href="#">Naxxramass</a></li>
+            </ul>
+        </div>
+
+        <button class="accordion">Raids</button>
+        <div class="panel">
+            <p>insert nav</p>
         </div>
     </div>
-</section>
-<?php
-    include 'includes/socials.inc.php';
-    include 'includes/footer.inc.php';
-?>
+    <script>
+        var acc = document.getElementsByClassName("classes");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

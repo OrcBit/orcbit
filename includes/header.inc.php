@@ -11,7 +11,9 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700%7COpen+Sans:400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
     <link rel="icon" href="orcbitlogo.png">
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
 
 <body>
     <header>

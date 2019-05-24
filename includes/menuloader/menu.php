@@ -1,36 +1,15 @@
-<!--sidebar menu-->
 <?php
-echo '<aside class="sidebarmenu">';
-    echo '<div class="sidebarmenudiv">';
-        echo '<div class="sidebar">';
-            echo '<ul id="menu_list">'; 
-            $category_query = "SELECT * FROM category";
-            $category_query_run = $db->query($category_query);
-            while($row = mysqli_fetch_assoc($category_query_run)){
-                $category_name = $row['categoryName'];
-                $category_icon = $row['categoryIcon'];
-                
-                $guides_query = "SELECT * FROM guides WHERE guideCategory = '$category_name' GROUP BY dataName ORDER BY guideName";
-                $guides_query_run = $db->query($guides_query);
-                $amount = $guides_query_run->num_rows;
-                
-                echo '<div class="menu_point">';
-                    echo '<img src="'.$category_icon.'" class="menu_icon"/>';
-                    echo '<li>'.$category_name.'</li>';
-                
-                    if($category_name == 'Class Guides'){
+$conn_error = 'Kunne ikke forbinde til databasen.';
 
-                    echo '<div class="plusit">';
-                        echo '<img src="images/minus2.png">';
-                    echo '</div>';
-                    }else{
-                    echo '<div class="plusit">';
-                        echo '<img src="images/minus2.png"/>';
-                    echo '</div>';
-                    }
-                echo '</div>';
-                
-                if($amount > 0){
+if($db = mysqli_connect("mysql78.unoeuro.com", "graumedia_dk", "mpe45eav", "graumedia_dk_db2")){
+}else{
+	die($conn_error);
+}
+
+if (!mysqli_set_charset($db, "utf8")) {
+    exit();
+}
+        if($amount > 0){
                     while($row = mysqli_fetch_assoc($guides_query_run)){
 
                         $data_name = $row['dataName'];
@@ -92,9 +71,5 @@ echo '<aside class="sidebarmenu">';
                         }
                         echo '</div>';
                     }
-                }
-            }
-        echo '</div>';
-    echo '</div>';
-echo '</aside>';
+        }
 ?>
