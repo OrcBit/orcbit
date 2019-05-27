@@ -13,9 +13,9 @@
     <h3></h3>
         
             <div class="para">
-        <p>INSER SOCIALS AND OTHER CHANNELS.<br><br>
+        <p><br><br>
             
-        Twitter - Discord - email - Facebook</p>
+           <a href="https://www.twitter.com/orcbitgg" target="_blank">Twitter </a> - <a href="https://discord.gg/zdkacX" target="_blank">Discord</a> 
             </div>
     </div>
     </div>

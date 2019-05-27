@@ -15,7 +15,7 @@
             <div class="para">
         <p>On my website you will find all my YouTube video guides along with important and usefull details and links, susch as pre-raid BiS lists and imformation better suited for writing.<br><br>
             
-            You can read more about me under the  <a href="https://www.orcbit.tv/about">about</a> page or check out ways to <a href="https://www.orcbit.tv/support">support</a> the website and the <a href="https://www.youtube.com/orcbit">channel</a>. All support is appreaciated and this is my way of syaing thank you - With a website filled with useful Classic WoW guides and content. which I can update when necessary.</p>
+            You can read more about me under the  <a href="https://www.orcbit.tv/about.php">about</a> page or check out ways to <a href="https://www.orcbit.tv/support.php">support</a> the website and the <a href="https://www.youtube.com/orcbit">channel</a>. All support is appreaciated and this is my way of syaing thank you - With a website filled with useful Classic WoW guides and content. which I can update when necessary.</p>
             </div>
     </div>
     </div>
